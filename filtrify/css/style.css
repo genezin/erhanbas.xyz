@@ -12,12 +12,29 @@ body { margin: 0; font-size: 1em; line-height: 1.4; }
 
 ::-moz-selection { background: black; background: rgba(0, 0, 0, 0.5); color: #fff; text-shadow: none; }
 ::selection { background: black; background: rgba(0, 0, 0, 0.5); color: #fff; text-shadow: none; }
-
-a { color: #00e; }
+/* EB: 
+a { color: #00e; } 
 a:visited { color: #551a8b; }
 a:hover { color: #06e; }
 a:focus { outline: thin dotted; }
 a:hover, a:active { outline: 0; }
+*/
+a {
+  -moz-transition: border-bottom-color 0.2s ease, color 0.2s ease;
+  -webkit-transition: border-bottom-color 0.2s ease, color 0.2s ease;
+  -ms-transition: border-bottom-color 0.2s ease, color 0.2s ease;
+  transition: border-bottom-color 0.2s ease, color 0.2s ease;
+  text-decoration: none;
+  color: #585858;
+  border-bottom: dotted 1px rgba(88, 88, 88, 0.5);
+}
+ a:before { color: #585858; }
+
+  a:hover {
+  	border-bottom-color: transparent;
+  	color: #f2849e !important;
+  }
+
 abbr[title] { border-bottom: 1px dotted; }
 b, strong { font-weight: bold; }
 blockquote { margin: 1em 40px; }
@@ -129,8 +146,8 @@ div#header > iframe {
 #___plusone_0{ width:65px !important; }*/
 
 div#main {
-  background: #2D3743 url(../img/bg-main.png) repeat 0 0;
-  background: #ffffff; /*url(../img/bg-main.png) repeat 0 0;*/
+  background: #eeeeee; /* match it with ../../assests/css/main.css:line#1631
+  /*background: #ffffff; /*url(../img/bg-main.png) repeat 0 0;*/
 /*EB@051717
   border-top: 1px solid #DDD;
   box-shadow: inset white 0 1px, inset rgba(0, 0, 0, 0.5) 0 0 25px;

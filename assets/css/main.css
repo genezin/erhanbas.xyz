@@ -1622,7 +1622,12 @@
 
 	}
 
-	body {
+/* EB :
+	body { 
+		background: #eeeeee;
+	}
+*/
+	body { 
 		background: #eeeeee;
 	}
 
@@ -1920,7 +1925,7 @@
 
 	ul {
 		list-style: disc;
-		margin: 0 0 2em 0;
+		margin: 0 0 0em 0;
 		padding-left: 1em;
 	}
 
@@ -1961,10 +1966,18 @@
 			padding-left: 0;
 		}
 
+/* EB : moves home tab to left and fixes spacing
 			ul.actions li {
 				display: inline-block;
 				padding: 0 1em 0 0;
 				vertical-align: middle;
+			}
+            */
+			ul.actions li {
+				display: inline-block;
+				padding: 0 4em 1em 0;
+				vertical-align: middle;
+                margin-left:-3em;
 			}
 
 				ul.actions li:last-child {
@@ -2615,7 +2628,7 @@
 			transition: transform 0.5s ease, opacity 0.5s ease;
 			position: relative;
 			width: calc(33.33333% - 2.5em);
-			margin: 2.5em 0 0 2.5em;
+			margin: 0 0 2.5em 2.5em; /*EB margin: 2.5em 0 0 2.5em;*/
 		}
 
 			.tiles article > .image {
@@ -2744,7 +2757,7 @@
 					}
 
 			.tiles article.style1 > .image:before {
-				/*background-color: #000000; /*#f2849e;*/
+				/*background-color: #000000; /*EB:#f2849e;*/
 			}
 
 			.tiles article.style2 > .image:before {
